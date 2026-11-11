@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Article Voice Reader",
+  "description": "Select text on any page, then read it aloud or translate English content into Chinese.",
+  "version": "0.1.0",
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.openai.com/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "src/options.html",
+  "action": {
+    "default_title": "Article Voice Reader",
+    "default_popup": "src/options.html"
+  }
+}

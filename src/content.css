@@ -1,0 +1,138 @@
+#avr-selection-toolbar,
+#avr-reader-panel {
+  color: #171717;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+  z-index: 2147483647;
+}
+
+#avr-selection-toolbar[hidden],
+#avr-reader-panel[hidden] {
+  display: none;
+}
+
+.avr-toolbar {
+  position: fixed;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 6px;
+  background: #171717;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.avr-badge {
+  display: inline-grid;
+  min-width: 34px;
+  min-height: 30px;
+  place-items: center;
+  padding: 0 8px;
+  border-radius: 6px;
+  background: #d9f99d;
+  color: #171717;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.avr-toolbar button,
+.avr-controls button,
+.avr-panel-head button {
+  min-width: 40px;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 6px;
+  background: #f5f5f5;
+  color: #171717;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1;
+}
+
+.avr-toolbar button:hover,
+.avr-controls button:hover,
+.avr-panel-head button:hover {
+  background: #d9f99d;
+}
+
+.avr-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: min(380px, calc(100vw - 36px));
+  max-height: min(560px, calc(100vh - 36px));
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  overflow: auto;
+  background: #fbfbf8;
+  border: 1px solid #d7d7cd;
+  border-radius: 8px;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.22);
+}
+
+.avr-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.avr-panel-head strong {
+  color: #171717;
+  font-size: 15px;
+}
+
+.avr-panel-head button {
+  min-width: 30px;
+  width: 30px;
+  padding: 0;
+}
+
+.avr-preview {
+  max-height: 280px;
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid #e4e4dc;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.avr-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.avr-field {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 10px;
+  align-items: center;
+  color: #444;
+  font-size: 13px;
+}
+
+.avr-field input {
+  width: 100%;
+}
+
+.avr-voice {
+  min-height: 18px;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.avr-status {
+  min-height: 18px;
+  color: #666;
+  font-size: 12px;
+}

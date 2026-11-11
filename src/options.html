@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Article Voice Reader</title>
+    <link rel="stylesheet" href="./options.css">
+  </head>
+  <body>
+    <main class="shell">
+      <h1>Article Voice Reader</h1>
+      <p>选中文字后使用浮窗朗读、翻译，或翻译后朗读。</p>
+      <p id="key-state" class="key-state">正在检查设置...</p>
+
+      <label>
+        <span>OpenAI API Key</span>
+        <input id="api-key" type="password" autocomplete="off" placeholder="sk-...">
+      </label>
+      <p class="hint">浏览器插件不能自动读取本机 .env.local。要使用翻译，请把 Key 填到这里并保存。</p>
+
+      <label>
+        <span>翻译模型</span>
+        <input id="model" type="text" value="gpt-5-nano">
+      </label>
+
+      <div class="actions">
+        <button id="save" type="button">保存</button>
+        <button id="clear" type="button">清除 Key</button>
+      </div>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script src="./options.js"></script>
+  </body>
+</html>
